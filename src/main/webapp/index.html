@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+    <title>Career Assessment Tool</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('Resources/images/background1.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
+
+        .navbar {
+            background-color: rgba(0, 123, 255, 0.8);
+            overflow: hidden;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar a, .dropdown .dropbtn {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            border: none;
+            background: none;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+        }
+
+        .navbar a:hover, .dropdown:hover .dropbtn {
+            background-color: rgba(0, 86, 179, 0.8);
+            color: #fff;
+            transform: scale(1.05);
+            text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .header {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #007bff;
+            text-align: center;
+            padding: 20px;
+            border-bottom: 5px solid #007bff;
+            margin-bottom: 20px;
+        }
+
+        .header h3 {
+            margin: 0;
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        .content {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: rgba(0, 123, 255, 0.8);
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin: 0 0 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin: 0 0 20px;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+
+        .feature {
+            flex: 1;
+            padding: 20px;
+            margin: 0 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .feature img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+        .cta {
+            background-color: rgba(0, 123, 255, 0.8);
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #fff;
+            color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .testimonials {
+            margin: 20px 0;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .testimonial h3 {
+            color: #007bff;
+            margin-bottom: 5px;
+        }
+
+        .testimonial p {
+            color: #333;
+        }
+
+      .footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Update the background to dark */
+    color: #fff;
+    margin-top: 40px;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 16px; /* Ensure the font size matches */
+}
+
+.footer a {
+    color: #fff; /* Set the link color to white */
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    color: #ffc107; /* Keep the hover effect for better interaction */
+}
+      
+    </style>
+</h:head>
+
+<body>
+    <div class="header">
+        <h3>Career Assessment Tool</h3>
+    </div>
+
+    <h:form>
+      <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="userlogin.html">User Login</a>
+        <a href="adminlogin.html">Admin Login</a>
+        <a href="userreg.html">Registration</a>
+        <a href="contactus.html">Contact Us</a>
+    </div>
+      
+    </h:form>
+
+    <div class="content">
+        <div class="hero">
+            <h1>Welcome to the Career Assessment Tool</h1>
+            <p>Your gateway to discovering your strengths and suitable career paths.</p>
+        </div>
+
+        <div class="features">
+            <div class="feature">
+                <img src="Resources/icons/assessment.png" alt="Career Assessments" />
+                <h3>Career Assessments</h3>
+                <p>Take assessments to understand your interests and aptitudes.</p>
+            </div>
+            <div class="feature">
+                <img src="Resources/icons/personality.png" alt="Personality Tests" />
+                <h3>Personality Tests</h3>
+                <p>Discover your personality type and how it relates to career choices.</p>
+            </div>
+            <div class="feature">
+                <img src="Resources/icons/skills.png" alt="Skills Evaluations" />
+                <h3>Skills Evaluations</h3>
+                <p>Evaluate your skills to identify areas for improvement and career fit.</p>
+            </div>
+        </div>
+
+        <div class="cta">
+            <h2>Get Started with Your Assessment</h2>
+            <p>Join us to explore your potential and plan your career path.</p>
+            <a href="assessments.html">Start Assessment</a>
+        </div>
+
+        <div class="testimonials">
+            <div class="testimonial">
+                <h3>Alekhya</h3>
+                <p>"This tool helped me identify my strengths and guided me towards my ideal career path!"</p>
+            </div>
+            <div class="testimonial">
+                <h3>Preethi Sri</h3>
+                <p>"The personality tests were insightful and really opened my eyes to new possibilities."</p>
+            </div>
+        </div>
+    </div>
+
+   <div class="footer">
+    <p>&copy; 2024 Career Assessment Tool. All rights reserved. <a href="contactus.html">Contact Us</a></p>
+</div>
+   
+</body>
+</html>

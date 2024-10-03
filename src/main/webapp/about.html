@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Career Assessment Tool</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('Resources/images/background1.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+
+        .navbar {
+            background-color: rgba(0, 123, 255, 0.9);
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: rgba(0, 86, 179, 0.8);
+        }
+
+        .header {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-bottom: 5px solid #007bff;
+        }
+
+        .header h1 {
+            font-size: 48px;
+            margin: 0;
+            font-weight: bold;
+        }
+
+        .header p {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        .content {
+            padding: 40px 20px;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            max-width: 1200px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            color: #333;
+        }
+
+        .content h2 {
+            color: #007bff;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .mission,
+        .vision {
+            margin-bottom: 40px;
+        }
+
+        .team {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        .member {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            flex: 1 0 30%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .member img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            margin-bottom: 15px;
+            border: 4px solid #007bff;
+        }
+
+        .member h3 {
+            margin-bottom: 10px;
+            font-size: 22px;
+            color: #007bff;
+        }
+
+        .member p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            margin-top: 40px;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .team {
+                flex-direction: column;
+            }
+
+            .member {
+                flex: 1 0 100%;
+            }
+
+            .header h1 {
+                font-size: 36px;
+            }
+
+            .header p {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar a {
+                padding: 12px 10px;
+            }
+
+            .header h1 {
+                font-size: 28px;
+            }
+
+            .header p {
+                font-size: 16px;
+            }
+
+            .content {
+                padding: 20px 10px;
+            }
+
+            .member {
+                padding: 20px;
+            }
+
+            .member img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="userlogin.html">User Login</a>
+        <a href="adminlogin.html">Admin Login</a>
+        <a href="userreg.html">Registration</a>
+        <a href="contactus.html">Contact Us</a>
+    </div>
+
+    <div class="header">
+        <h1>About Us</h1>
+        <p>Your guide to finding the perfect career path!</p>
+    </div>
+
+    <div class="content">
+        <div class="mission">
+            <h2>Problem Statement</h2>
+            <p>The goal of this project is to develop a web-based career assessment tool that provides students with career assessments, personality tests, and skills evaluations. This tool will help students understand their strengths and preferences, guiding them toward suitable career options.</p>
+        </div>
+
+        <div class="vision">
+            <h2>Modules</h2>
+            <h3>User (Student) Module:</h3>
+
+<p><b>User Registration:</b> Allow students to create accounts to access the platform.<br>
+<b>User Login:</b> Enable students to log in to their accounts securely.<br>
+<b>Career Assessments:</b> Provide a variety of assessments and personality tests to help students evaluate their skills and interests.<br>
+<b>View Results:</b> Allow students to view their assessment results in an easy-to-understand format.<br>
+<b>Explore Career Options:</b> Provide recommendations and resources based on assessment results to help students explore potential career paths.<br></p>
+<h3>Admin Module:</h3>
+
+<p><b>Admin Login:</b> Enable administrators to log in securely to the platform.<br>
+<b>Manage Assessment Tools:</b> Allow admins to create, edit, or delete assessments and tests available on the platform.<br>
+<b>Update Test Data:</b> Enable admins to update the questions and options for assessments as needed.<br>
+<b>Provide Career Recommendations:</b> Allow admins to develop and manage career recommendations based on assessment outcomes.<br>
+<b>View User Activity:</b> Provide functionality for admins to track user engagement and assessment completion rates.</p><br>
+        </div>
+
+        <h2>Meet Our Team</h2>
+        <div class="team">
+            <div class="member">
+                <img src="Resources/images/mem.png" alt="Preethi Sri">
+                <h3>Preethi Sri</h3>
+                <p>2200090129</p>
+                <p>Computer Science & Information Technology.</p>
+            </div>
+            <div class="member">
+                <img src="Resources/images/mem.png" alt="Alekhya Budampudi">
+                <h3>Alekhya Budampudi</h3>
+                <p>2200090182</p>
+                <p>Computer Science & Information Technology.</p>
+            </div>
+            <div class="member">
+                <img src="Resources/images/mem.png" alt="Sashank Nerella">
+                <h3>Sashank Nerella</h3>
+                <p>2200030159</p>
+                <p>Computer Science Engineering.</p>
+            </div>
+        </div>
+
+        <h2>Our Faculty Mentor</h2>
+        <div class="team">
+            <div class="member">
+                <img src="Resources/images/mem.png" alt="Mentor Name">
+                <h3>Dr.R M Balajee </h3>
+                <p>Faculty Mentor</p>
+                <p>Providing expert guidance and support to help shape the project effectively.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Career Assessment Tool. All Rights Reserved.</p>
+    </div>
+</body>
+
+</html>

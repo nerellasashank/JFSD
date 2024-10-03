@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration - Career Assessment Tool</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('Resources/images/background1.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+
+        .navbar {
+            background-color: rgba(0, 123, 255, 0.8); /* Semi-transparent blue */
+            overflow: hidden;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            border: none;
+            background: none;
+        }
+
+        .navbar a:hover {
+            background-color: rgba(0, 86, 179, 0.8); /* Darker shade on hover */
+        }
+
+        .header {
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+            color: #007bff;
+            text-align: center;
+            padding: 20px;
+            border-bottom: 5px solid #007bff;
+            margin-bottom: 20px;
+        }
+
+        .header h3 {
+            margin: 0;
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        .form-container {
+            width: 100%;
+            max-width: 450px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.95); /* Slightly more opaque white */
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            margin: 20px auto;
+            box-sizing: border-box;
+            border: 1px solid #ddd; /* Subtle border for better definition */
+        }
+
+        .form-container h3 {
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .form-group input[type="text"], 
+        .form-group input[type="password"],
+        .form-group input[type="email"],
+        .form-group input[type="tel"],
+        .form-group input[type="date"] {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .form-group input[type="text"]:focus, 
+        .form-group input[type="password"]:focus,
+        .form-group input[type="email"]:focus,
+        .form-group input[type="tel"]:focus,
+        .form-group input[type="date"]:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+            outline: none;
+        }
+
+        .form-group .form-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        .form-group .form-button {
+            width: 100%;
+            padding: 14px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .form-group .form-button:hover {
+            background-color: #0056b3;
+        }
+        .footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Update the background to dark */
+    color: #fff;
+    margin-top: 40px;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 16px; /* Ensure the font size matches */
+}
+
+.footer a {
+    color: #fff; /* Set the link color to white */
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    color: #ffc107; /* Keep the hover effect for better interaction */
+}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h3>Career Assessment Tool</h3>
+    </div>
+
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="userlogin.html">User Login</a>
+        <a href="adminlogin.html">Admin Login</a>
+        <a href="userreg.html">Registration</a>
+        <a href="contactus.html">Contact Us</a>
+    </div>
+   
+    <div class="form-container">
+        <h3><b>Sign Up</b></h3>
+        <form id="registrationForm" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="id">ID</label>
+                <input type="text" id="id" aria-label="ID" required />
+                <div class="form-message" id="idMessage"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" aria-label="Name" required />
+                <div class="form-message" id="nameMessage"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <input type="text" id="gender" aria-label="Gender" required />
+                <div class="form-message" id="genderMessage"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">DOB</label>
+                <input type="date" id="dob" aria-label="DOB" required />
+                <div class="form-message" id="dobMessage"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" aria-label="Email" required />
+                <div class="form-message" id="emailMessage"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" aria-label="Password" required
+                       pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[A-Za-z\d]{8,}"
+                       title="Password must be at least 8 characters long and contain at least one number, one uppercase letter, and one lowercase letter." />
+                <div class="form-message" id="passwordMessage"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="contact">Contact</label>
+                <input type="tel" id="contact" aria-label="Contact" required pattern="\d{10}" />
+                <div class="form-message" id="contactMessage"></div>
+            </div>
+
+            <button type="submit" class="form-button">Register</button>
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            // Clear previous messages
+            document.querySelectorAll('.form-message').forEach(msg => msg.textContent = '');
+
+            // Basic validation logic
+            let valid = true;
+
+            // Check ID
+            if (!document.getElementById('id').value) {
+                document.getElementById('idMessage').textContent = 'ID is required';
+                valid = false;
+            }
+
+            // Check Name
+            if (!document.getElementById('name').value) {
+                document.getElementById('nameMessage').textContent = 'Name is required';
+                valid = false;
+            }
+
+            // Check Gender
+            if (!document.getElementById('gender').value) {
+                document.getElementById('genderMessage').textContent = 'Gender is required';
+                valid = false;
+            }
+
+            // Check DOB
+            if (!document.getElementById('dob').value) {
+                document.getElementById('dobMessage').textContent = 'DOB is required';
+                valid = false;
+            }
+
+            // Check Email
+            if (!document.getElementById('email').value) {
+                document.getElementById('emailMessage').textContent = 'Email is required';
+                valid = false;
+            }
+
+            // Check Password
+            if (!document.getElementById('password').value) {
+                document.getElementById('passwordMessage').textContent = 'Password is required';
+                valid = false;
+            }
+
+            // Check Contact
+            if (!document.getElementById('contact').value) {
+                document.getElementById('contactMessage').textContent = 'Contact is required';
+                valid = false;
+            }
+
+            return valid; // Prevent form submission if invalid
+        }
+    </script>
+     <div class="footer">
+    <p>&copy; 2024 Career Assessment Tool. All rights reserved. <a href="contactus.html">Contact Us</a></p>
+</div>
+    
+</body>
+</html>
